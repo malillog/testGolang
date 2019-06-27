@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/ingrammicro/backend-test/queue"
+	"github.com/malillog/testGolang/queue"
 )
 
 // New takes a processor and returns both
