@@ -3,8 +3,6 @@ package queue
 import (
 	"context"
 	"log"
-
-	"github.com/malillog/testGolang/queue"
 )
 
 // New takes a processor and returns both
@@ -44,7 +42,6 @@ type ClientImpl struct {
 }
 
 func (cli ClientImpl) CreateJob(ctx context.Context, id string, initialData MarshalUnmarshaler) error {
-	log.Print(queue.Queued)
 
 	var job = new(JobImpl)
 	job.ID = id
@@ -65,7 +62,7 @@ func (cli ClientImpl) CreateJob(ctx context.Context, id string, initialData Mars
 
 func (cli ClientImpl) GetJob(ctx context.Context, id string) (Job, error) {
 	//return job para procesar
-	log.Print(queue.Failed)
+	log.Print(Failed)
 
 	//State est = queue.Queued
 	//j := JobImpl{id, nil, est, ""}
